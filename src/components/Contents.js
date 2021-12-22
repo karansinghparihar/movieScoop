@@ -69,20 +69,20 @@ export const Contents = ({ contents }) => {
         }
     }
 
-    let contentsEmpty = false
-    if (trendTvshows.length ===0 || popTvshows.length ===0 || upcomTvshows.length ===0 || topTvshows.length ===0 || nowTvshows.length ===0) {
-        contentsEmpty = true
-    }
+    // let contentsEmpty = false
+    // if (trendTvshows.length ===0 || popTvshows.length ===0 || upcomTvshows.length ===0 || topTvshows.length ===0 || nowTvshows.length ===0) {
+    //     contentsEmpty = true
+    // }
 
     return (
         <div className="contents">
-            {contentsEmpty ? <h2>Loading...</h2> : <>
+            {/* {contentsEmpty ? <h2>Loading...</h2> : <> */}
                 <ContentList contents={trendTvshows} heading={`Trending ${contents.heading}`} />
                 <ContentList contents={popTvshows} heading='Popular on Netflix' />
                 <ContentList contents={upcomTvshows} heading={`Upcoming ${contents.heading}`} />
                 <ContentList contents={topTvshows} heading='Top Rated' />
                 <ContentList contents={nowTvshows} heading='Now Playing' />
-            </>}
+            {/* </>} */}
         </div>
     )
 }
