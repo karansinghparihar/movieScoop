@@ -1,7 +1,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #000;
 }
 
@@ -25,13 +25,24 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    margin: 1% 4% auto;
+    margin: 0% 4% auto;
 }
-
-header h1 {
-    font-size: 4.4rem;
-    color: red;
-    font-stretch: ultra-expanded;
+header img {
+    width: 15.5rem;
+    opacity: 1 !important;
+}
+.nav-links {
+    color: #fff;
+    width: 30%;
+}
+.nav-links a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+.nav-links a:hover{
+    color: #9c9898;
 }
 
 header div {
@@ -182,12 +193,18 @@ footer h2 {
     text-decoration: underline;
 }
 
-.movies-trending {
+.contents h2 {
+    color:#fff;
+    text-align: center;
+
+}
+.content-list {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-left: 3rem;
 }
-.movie {
+.content {
     margin: 0rem 0.2rem auto;
+    cursor: pointer;
 }
