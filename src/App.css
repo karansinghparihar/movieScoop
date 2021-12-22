@@ -1,0 +1,194 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: #000;
+}
+
+.app-front {
+    position: relative;
+    background: #000;
+}
+
+.app-front img {
+    opacity: 0.4;
+}
+
+.container {
+    position: absolute;
+    min-height: 40%;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 1% 4% auto;
+}
+
+header h1 {
+    font-size: 4.4rem;
+    color: red;
+    font-stretch: ultra-expanded;
+}
+
+header div {
+    width: 18%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header button {
+    width: 8rem;
+    height: 3.2rem;
+    color: #fff;
+    font-size: 1.4rem;
+    border-radius: 3px;
+}
+
+.select-lang {
+    width: 8rem;
+    height: 3.2rem;
+    background: #000;
+    font-size: 1.4rem;
+    border-radius: 3px;
+    font-family: 'FontAwesome', 'Second Font name';
+}
+
+.home {
+    max-width: 60%;
+    margin: 8% auto;
+    color: #fff;
+    text-align: center;
+}
+
+.register-email input, .register-email button {
+    width: 70%;
+    height: 5.8rem;
+    font-size: 1.625rem;
+    padding-left: 2%;
+    border: #000;
+    border-radius: 2px;
+}
+
+.app-feature-row {
+    display: flex;
+    padding: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #000;
+}
+
+.app-feature-row-reverse {
+    display: flex;
+    padding: 2rem;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background: #000;
+}
+
+.app-feature section {
+    color: #fff;
+    text-align: center;
+    margin: auto;
+}
+
+.app-feature h1 {
+    font-size: 4rem;
+}
+
+.app-feature h3 {
+    font-size: 2rem;
+    padding: 0 10rem;
+}
+
+.app-feature img {
+    margin: 0rem 6rem 2rem 6rem;
+}
+
+.faqs {
+    background: #000;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.faq-ques {
+    align-items: center;
+    padding: 3rem;
+    max-width: 60%;
+    background: #242424;
+    height: 7rem;
+    margin: 0.8rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.faq-ans {
+    padding: 3rem;
+    max-width: 60%;
+    background: #242424;
+    margin: 0.8rem auto;
+}
+.faqs p {
+    margin: 5rem;
+}
+
+footer {
+    background: #000;
+    color: #757575;
+}
+footer h2 {
+    padding: 5rem 0rem 2rem 18.7rem;
+}
+.footer-select {
+    margin: 1.5rem 0rem 2rem 18.7rem;
+    width: 12rem;
+    padding-left: 1rem;
+    border-color:#757575;
+    color: rgb(148, 141, 141); 
+}
+.footer-country {
+    padding: 0rem 0rem 2rem 18.7rem;
+}
+
+.footer-links {
+    width: 68%;
+    margin: auto;
+    background: #000;
+    color: #757575;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 3rem;
+    align-items: center;
+}
+.footer-links h3 {
+    width: inherit;
+    height: inherit;
+}
+.footer-links a {
+    color: inherit;
+    width: inherit;
+    height: inherit;
+    text-decoration: none;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.movies-trending {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3rem;
+}
+.movie {
+    margin: 0rem 0.2rem auto;
+}
