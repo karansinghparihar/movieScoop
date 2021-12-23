@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Header from './Header'
+import ReactPlayer  from 'react-player/youtube'
 
 const ContentDetail = ({ id, api_key, contentType }) => {
 
@@ -7,6 +8,7 @@ const ContentDetail = ({ id, api_key, contentType }) => {
     const [cdcasts, setCdcasts] = useState([])
     const [rating, setRating] = useState([])
     const [trailer, setTrailer] = useState([])
+    const [showPlayer, setShowPlayer] = useState(false)
 
     useEffect(() => {
         const getCdshow = async () => {
@@ -47,11 +49,13 @@ const ContentDetail = ({ id, api_key, contentType }) => {
         const trailer = await res.json()
         return trailer.results.at(-1)
     }
+
     return (
         <div className='bg-contact-detail'>
-            <img className='bg-contact-detail-img' src={`https://image.tmdb.org/t/p/w500/${cdshow.poster_path}`} alt={cdshow.backdrop_path} />
+            <img className='bg-contact-detail-img' style={{ height: showPlayer ? '108rem' : '60rem' }} src={`https://image.tmdb.org/t/p/w500/${cdshow.poster_path}`} alt={cdshow.backdrop_path} />
             <div className='header-contact-detail'>
                 <Header />
+                {showPlayer ? <ReactPlayer  className='video-player' url={`https://www.youtube.com/watch?v=${trailer.key}`} /> : null}
                 <div className='content-detail'>
                     <img style={{ width: '100%' }} src={`https://image.tmdb.org/t/p/w500/${cdshow.poster_path}`} alt={cdshow.backdrop_path} />
                     <div className='content-detail-details'>
@@ -59,7 +63,7 @@ const ContentDetail = ({ id, api_key, contentType }) => {
                         <h3>{cdshow.overview}</h3><br />
                         <div className='content-detail-trailer'>
                             {rating == null ? <h2> Ratings : NA</h2> : <h2>Rating : {rating.length > 0 ? rating[0].rating : 'NA'}</h2>}
-                            {trailer == null ? <h2>Trailer Not available</h2> : <a href={`https://www.youtube.com/watch?v=${trailer.key}`} target='_blank'><div>Watch Trailer</div></a>}
+                            {trailer == null ? <h2>Trailer Not available</h2> : showPlayer ? null : <div onClick={() => setShowPlayer(true)}>Watch Trailer</div>}
                         </div>
                         <h2>Cast</h2><br />
                         <div className='content-detail-casts'>
