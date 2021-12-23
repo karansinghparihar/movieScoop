@@ -16,10 +16,12 @@ body {
 
 .container {
     position: absolute;
+    float: left;
     min-height: 40%;
     top: 0%;
     left: 0%;
     width: 100%;
+    z-index: 1000;
 }
 
 header {
@@ -207,4 +209,63 @@ footer h2 {
 .content {
     margin: 0rem 0.2rem auto;
     cursor: pointer;
+}
+
+.bg-contact-detail {
+    position: relative;
+}
+.bg-contact-detail-img {
+    opacity: 0.25;
+    width: 100%;
+    height: 60rem;
+}
+
+.header-contact-detail {
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.content-detail {
+    
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+}
+.content-detail img {
+    max-width: 30rem;
+}
+.content-detail-details {
+    padding: 0rem 2rem;
+}
+.content-detail-casts {
+    display: flex;
+    flex-direction: row;
+}
+.content-detail-cast img {
+    width: 92%;
+}
+
+.content-detail-trailer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.content-detail-trailer h2 {
+    padding: 0.75rem 0rem !important;
+}
+.content-detail-trailer a {
+    text-decoration: none;
+}
+.content-detail-trailer div {
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+    margin: 0rem 1.4rem;
 }

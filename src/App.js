@@ -9,7 +9,9 @@ import Faqs from './components/Faqs';
 import Footer from './components/Footer';
 import { Routes, Route } from 'react-router-dom'
 import Movies from './components/Movies';
-import Tvshows from './components/Tvshow';
+import Movie from './components/Movie';
+import Tvshows from './components/Tvshows';
+import Tvshow from './components/Tvshow';
 
 function App() {
 
@@ -37,8 +39,10 @@ function App() {
             <Footer />
           </>
         } />
-        <Route exact path='/movies' element={<><Header /><Movies /></>}></Route>
-        <Route exact path='/tvshows' element={<><Header /><Tvshows /></>}></Route>
+        <Route exact path='/movies' element={<Movies />}></Route>
+        <Route exact path='/movie/:id' element={<Movie />}></Route>
+        <Route exact path='/tvshows' element={<Tvshows />}></Route>
+        <Route exact path='/tvshow/:id' element={<Tvshow />}></Route>
       </Routes>
     </div>
   );
