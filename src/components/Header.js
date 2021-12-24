@@ -1,9 +1,20 @@
 import GuestLogin from "./GuestLogin";
 import netflixLogo from '../images/netflixLogo.png'
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useUserAuth } from "../context/UserAuthContext";
 
 const Header = () => {
     
+    const location = useLocation().pathname
+    const { signOut } = useUserAuth()
+    const signOutHandler = async() => {
+        try {
+            await signOut()
+        } catch(err) {
+            console.log(err)
+        }
+    }
 
     return (
         <header>
@@ -15,7 +26,7 @@ const Header = () => {
             </div>
             <div>
                 <GuestLogin color='#fff'/>
-                <Link to='/signin'><button>Sign In</button></Link>
+                {location==='/' ? <Link to='/signin'><button>Sign In</button></Link> : <Link to='/signin'><button onClick={signOutHandler}>Sign Out</button></Link>}
             </div>
         </header>
     )
