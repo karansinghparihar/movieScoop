@@ -1,6 +1,5 @@
 import React from 'react'
 import FooterLinks from './FooterLinks'
-import SelectLang from './SelectLang'
 
 const Footer = () => {
     const foLinks = [
@@ -37,10 +36,7 @@ const Footer = () => {
                     return <FooterLinks key={index} foLink={foLink} />
                 })
             }
-            <div className='footer-country'>
-                <SelectLang color='#757575' />
-            </div>
-            <h3 className='footer-country'>Netflix India</h3>
+            <br /><h3 className='footer-country'><i className='fa fa-globe'></i>&nbsp;Netflix India</h3>
         </footer>
     )
 }

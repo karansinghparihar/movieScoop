@@ -35,7 +35,7 @@ header img {
 }
 .nav-links {
     color: #fff;
-    width: 30%;
+    width: 35%;
 }
 .nav-links a {
     font-size: 1.25rem;
@@ -45,6 +45,16 @@ header img {
 }
 .nav-links a:hover{
     color: #9c9898;
+    transform: scale(1.1);
+}
+
+header button {
+    cursor: pointer;
+    background: red;
+    border: none;
+}
+header button:hover {
+    transform: scale(1.08);
 }
 
 header div {
@@ -63,12 +73,23 @@ header button {
 }
 
 .select-lang {
-    width: 8rem;
+    width: 9rem;
     height: 3.2rem;
     background: #000;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 3px;
     font-family: 'FontAwesome', 'Second Font name';
+    padding-left: 1rem;
+}
+.select-lang a {
+    width: inherit;
+    text-decoration: none;
+    color: #fff;
+}
+.select-lang:hover {
+    cursor: pointer;
+    transform: scale(1.08);
 }
 
 .home {
@@ -231,23 +252,34 @@ footer h2 {
 }
 
 .content-detail {
-    
     color: #fff;
     display: flex;
     flex-direction: row;
 }
 .content-detail img {
     max-width: 30rem;
+    margin-left: 3rem;
 }
 .content-detail-details {
     padding: 0rem 2rem;
 }
+.content-detail-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content-detail-list div:hover {
+    transform: scale(1.08) !important;
+}
+
 .content-detail-casts {
     display: flex;
     flex-direction: row;
 }
 .content-detail-cast img {
     width: 92%;
+    margin-left: .2rem;
 }
 
 .content-detail-trailer {
@@ -258,20 +290,94 @@ footer h2 {
 .content-detail-trailer h2 {
     padding: 0.75rem 0rem !important;
 }
-.content-detail-trailer div {
+.content-detail-trailer div, .content-detail-list div  {
     cursor: pointer;
     border: 1px solid #fff;
     color: #fff;
     font-size: 2rem;
     padding: 0.5rem;
-    margin: 0rem 1.4rem;
+    margin: 1rem 1.4rem;
+    border-radius: 0.4rem;
 }
 .content-detail-trailer div:hover {
     transform: scale(1.08);
-
 }
 .video-player {
     width: 100% !important;
     height: 40rem !important;
     margin-bottom: 4rem;
+}
+
+.bg-signin {
+    position: relative;
+}
+.bg-signin img {
+    opacity: 0.4;
+}
+.logo-signin img {
+    width: 15.5rem;
+    opacity: 1 !important;
+    top: 0%;
+    left: 4%;
+    z-index: 1000;
+    position: absolute;
+}
+.logo-signin img:hover {
+    transform: scale(1.08);
+}
+.signin {
+    position: absolute;
+    top: 15%;
+    left: 34%;
+    z-index: 1000;
+    color: #fff;
+    width: 40rem;
+    min-height: 37rem;
+    padding: 3rem 5rem;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.6);
+}
+.signin input {
+    height: 3.5rem;
+    margin: 2rem 0rem;
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    border-radius: 0.4rem;
+}
+.signin h1{
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+.signin button {
+    height: 3.5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    background: red;
+    border-radius: 0.4rem;
+    margin: 2rem 0rem;
+    cursor: pointer;
+}
+.signin button:hover {
+    transform: scale(1.08);
+}
+.signin-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.45rem;
+}
+.signin-footer a{
+    color: #fff;
+    text-decoration: none;
+}
+.signin-footer a:hover {
+    text-decoration: underline;
+    transform: scale(1.08);
+}
+
+.mylists {
+    color: #fff;
 }
