@@ -5,11 +5,7 @@ import imgFeature2 from '../images/feature2.jpg'
 import imgFeature3 from '../images/feature3.png'
 import imgFeature4 from '../images/feature4.png'
 
-import { useUserAuth } from "../context/UserAuthContext";
-
 const Features = () => {
-
-    console.log(useUserAuth())
 
     const featureData = [
         {
@@ -34,11 +30,11 @@ const Features = () => {
         }
     ]
     return (
-        <div className="">
+        <>
             {
                 featureData.map((feature, index) => <><Feature key={index} featureData={feature} index={index+1} /> <HorizontalSection /></> )
             }
-        </div>
+        </>
     )
 }
 export default Features;

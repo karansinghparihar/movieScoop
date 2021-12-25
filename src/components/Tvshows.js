@@ -2,7 +2,7 @@ import Header from "./Header";
 import Contents from "./Contents";
 import Footer from "./Footer";
 
-const Tvshows = ({guestLoginHandler}) => {
+const Tvshows = () => {
 
     const contents = {
         type: 'tv',
@@ -14,7 +14,7 @@ const Tvshows = ({guestLoginHandler}) => {
 
     return (
         <div className="tvshows">
-            <Header guestLoginHandler={guestLoginHandler} />
+            <Header />
             <Contents contents={contents} />
             <Footer />
         </div>

@@ -3,7 +3,7 @@ import Header from './Header'
 import ReactPlayer from 'react-player/youtube'
 import EmptyCastImage from '../images/empty_cast_image.png'
 
-const ContentDetail = ({ id, api_key, contentType, addToList, guestLoginHandler }) => {
+const ContentDetail = ({ id, api_key, contentType, addToList }) => {
     
     const [cdshow, setCdshow] = useState({})
     const [cdcasts, setCdcasts] = useState([])
@@ -56,7 +56,7 @@ const ContentDetail = ({ id, api_key, contentType, addToList, guestLoginHandler 
             <img className='bg-contact-detail-img' style={{ height: showPlayer ? '108rem' : '65rem' }} src={`https://image.tmdb.org/t/p/w500/${cdshow.poster_path}`} alt={cdshow.poster_path} />
             
             <div className='header-contact-detail'>
-                <Header  guestLoginHandler={guestLoginHandler}/>
+                <Header />
 
                 {showPlayer ? <ReactPlayer className='video-player' controls={true} url={`https://www.youtube.com/watch?v=${trailer.key}`} /> : null}
                 
@@ -81,7 +81,7 @@ const ContentDetail = ({ id, api_key, contentType, addToList, guestLoginHandler 
                         <div className='content-detail-casts'>
                             {
                                 cdcasts.slice(0, 4).map((cdcast, index) => {
-                                    return <div className='content-detail-cast'>
+                                    return <div key={index} className='content-detail-cast'>
                                         {cdcast.profile_path ? <img src={`https://image.tmdb.org/t/p/w500/${cdcast.profile_path}`} alt={cdcast.profile_path} /> : <img src={EmptyCastImage} alt={EmptyCastImage} />}
                                         {cdcast.name ? <h2 style={{ textAlign: 'center' }}>{cdcast.name}</h2> : null}
                                     </div>

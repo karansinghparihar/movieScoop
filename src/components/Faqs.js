@@ -34,9 +34,9 @@ const Faqs = () => {
             {
                 qna.map((faq, index) => <Faq key={index} faq={faq} />)
             }
-            <p>
+            <div className="faq-register-email">
                 <RegisterEmail content={'Ready to watch? Enter your email to create or restart your membership.'} />
-            </p>
+            </div>
         </div>
     )
 }

@@ -1,15 +1,16 @@
 import { Link, useNavigate } from "react-router-dom";
 import NetflixBg from '../images/netflixBg.png'
 import netflixLogo from '../images/netflixLogo.png'
+import ReactGoogleButton from 'react-google-button'
 import { useState } from 'react'
 import { useUserAuth } from "../context/UserAuthContext";
 
-const SignIn = ({guestLoginHandler}) => {
+const SignIn = () => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [err, setErr] = useState(null)
-    const {signIn} = useUserAuth()
+    const {signIn, googleSignIn} = useUserAuth()
     const navigate = useNavigate()
 
     const submitHandler = async (e) => {
@@ -17,7 +18,17 @@ const SignIn = ({guestLoginHandler}) => {
         try {
             setErr('')
             await signIn(email, password)
-            guestLoginHandler()
+            navigate('/')
+        } catch(err) {
+            setErr(err.message)
+        }
+    }
+
+    const googleSignInHandler = async(e) => {
+        e.preventDefault()
+        try {
+            setErr('')
+            await googleSignIn()
             navigate('/')
         } catch(err) {
             setErr(err.message)
@@ -34,7 +45,8 @@ const SignIn = ({guestLoginHandler}) => {
                     {err ? <h2>{err}</h2> : null}
                     <input type='email' value={email} placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
                     <input type='password' value={password} placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
-                    <button type='submit'>Sign In</button>
+                    <button type='submit'>Sign In</button><hr />
+                    <ReactGoogleButton onClick={googleSignInHandler} style={{ fontSize: '1.5rem', width: '30rem', margin: '2rem 0rem', borderRadius: '0.3rem' }} />
                     <div className="signin-footer">
                         New to Netflix?<Link to='/signup'>Sign up now.</Link>
                     </div>

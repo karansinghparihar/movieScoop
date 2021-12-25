@@ -53,6 +53,10 @@ header img {
     width: 100%;
 }
 
+.guest-login.guest-login-diasbled {
+    pointer-events:none;
+}
+
 header button {
     cursor: pointer;
     background: red;
@@ -78,7 +82,7 @@ header button {
 }
 
 .select-lang {
-    width: 9rem;
+    width: 10rem;
     height: 3.2rem;
     background: #000;
     font-size: 1.2rem;
@@ -111,6 +115,9 @@ header button {
     padding-left: 2%;
     border: #000;
     border-radius: 2px;
+}
+.register-email button:hover {
+    transform: scale(1.04);
 }
 
 .app-feature-row {
@@ -174,7 +181,7 @@ header button {
     background: #242424;
     margin: 0.8rem auto;
 }
-.faqs p {
+.faqs .faq-register-email {
     margin: 5rem;
 }
 
@@ -358,6 +365,7 @@ footer h2 {
     color: red;
     border: 2px solid red;
     padding: 0.5rem;
+    font-weight: 100;
 }
 
 .signin button {

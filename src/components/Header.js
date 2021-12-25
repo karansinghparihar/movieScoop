@@ -1,16 +1,17 @@
 import GuestLogin from "./GuestLogin";
 import netflixLogo from '../images/netflixLogo.png'
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useUserAuth } from "../context/UserAuthContext";
 
-const Header = ({ guestLoginHandler, guestLogin }) => {
+const Header = () => {
     
-    const location = useLocation().pathname
-    const { logOut } = useUserAuth()
+    const navigate = useNavigate()
+    const { logOut, user } = useUserAuth()
+    
     const signOutHandler = async() => {
         try {
             await logOut()
+            navigate('/')
         } catch(err) {
             console.log(err)
         }
@@ -25,8 +26,8 @@ const Header = ({ guestLoginHandler, guestLogin }) => {
                 <Link to='/mylist'>My List</Link>
             </div>
             <div>
-                <GuestLogin color='#fff' guestLoginHandler={guestLoginHandler} guestLogin={guestLogin} />
-                {location==='/' ? <Link to='/signin'><button>Sign In</button></Link> : <Link to='/signin'><button onClick={signOutHandler}>Sign Out</button></Link>}
+                { user ? null : <GuestLogin color='#fff' /> }
+                { user ? <Link to='/signin'><button style={{ marginLeft: '11rem' }} onClick={signOutHandler}>Sign Out</button></Link> : <Link to='/signin'><button>Sign In</button></Link> }
             </div>
         </header>
     )

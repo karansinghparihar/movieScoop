@@ -7,7 +7,7 @@ import Features from './components/Features';
 import HorizontalSection from "./components/HorizontalSection";
 import Faqs from './components/Faqs';
 import Footer from './components/Footer';
-import { Routes, Route, useNavigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Movies from './components/Movies';
 import Movie from './components/Movie';
 import Tvshows from './components/Tvshows';
@@ -22,25 +22,10 @@ function App() {
 
   const [isLoading, setIsLoading] = useState(true)
   const [myList, setMyList] = useState({})
-  const [guestLogin, setGuestLogin] = useState(false)
-  const guestNavigate = useNavigate()
 
   useEffect(() => {
     setIsLoading(false)
   })
-
-  const guestLoginHandler = () => {
-    setGuestLogin(!guestLogin)
-    console.log('guestLoginHandler')
-    if (guestLogin) {
-      guestNavigate('/')
-    }
-    else {
-      guestNavigate('/movies')
-    }
-  }
-
-  console.log('guest login', guestLogin)
 
   const addToList = (list) => {
     console.log(list)
@@ -56,7 +41,7 @@ function App() {
               <div className='app-front'>
                 <img src={NetflixBg} alt={NetflixBg} width={'100%'} />
                 <div className='container'>
-                  <Header guestLoginHandler={guestLoginHandler} guestLogin={guestLogin} />
+                  <Header />
                   <Home />
                 </div>
                 <HorizontalSection />
@@ -67,13 +52,14 @@ function App() {
               <Footer />
             </>
           } />
-          <Route exact path='/movies' element={guestLogin ? <Movies guestLoginHandler={guestLoginHandler} /> : <ProtectedRoute><Movies guestLoginHandler={guestLoginHandler} /></ProtectedRoute>}></Route>
-          <Route exact path='/movie/:id' element={guestLogin ? <Movie guestLoginHandler={guestLoginHandler} /> : <ProtectedRoute><Movie guestLoginHandler={guestLoginHandler} /></ProtectedRoute>}></Route>
-          <Route exact path='/tvshows' element={guestLogin ? <Tvshows guestLoginHandler={guestLoginHandler} /> : <ProtectedRoute><Tvshows guestLoginHandler={guestLoginHandler} /></ProtectedRoute>}></Route>
-          <Route exact path='/tvshow/:id' element={guestLogin ? <Tvshow guestLoginHandler={guestLoginHandler} addToList={addToList} /> : <ProtectedRoute><Tvshow guestLoginHandler={guestLoginHandler} addToList={addToList} /></ProtectedRoute>}></Route>
-          <Route exact path='/mylist' element={guestLogin ? <MyList myList={myList} /> : <ProtectedRoute><MyList myList={myList} /></ProtectedRoute>}></Route>
 
-          <Route exact path='/signin' element={<SignIn guestLoginHandler={guestLoginHandler} />}></Route>
+          <Route exact path='/movies' element={<ProtectedRoute><Movies /></ProtectedRoute>}></Route>
+          <Route exact path='/movie/:id' element={<ProtectedRoute><Movie /></ProtectedRoute>}></Route>
+          <Route exact path='/tvshows' element={<ProtectedRoute><Tvshows /></ProtectedRoute>}></Route>
+          <Route exact path='/tvshow/:id' element={<ProtectedRoute><Tvshow /></ProtectedRoute>}></Route>
+          <Route exact path='/mylist' element={<ProtectedRoute><MyList /></ProtectedRoute>}></Route>
+
+          <Route exact path='/signin' element={<SignIn />}></Route>
           <Route exact path='/signup' element={<Signup />}></Route>
         </Routes>
       </UserAuthContextProvider>

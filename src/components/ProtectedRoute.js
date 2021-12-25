@@ -3,8 +3,11 @@ import { useUserAuth } from '../context/UserAuthContext'
 
 const ProtectedRoute = ({ children }) => {
    
-    let {user} = useUserAuth()
-        
+    let {user, guest} = useUserAuth()
+      
+    if( guest ) {
+        return children
+    } 
     if( !user ) {
         return <Navigate to='/signin' />
     }
