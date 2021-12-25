@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useUserAuth } from "../context/UserAuthContext";
 
-const Header = () => {
+const Header = ({ guestLoginHandler, guestLogin }) => {
     
     const location = useLocation().pathname
-    const { signOut } = useUserAuth()
+    const { logOut } = useUserAuth()
     const signOutHandler = async() => {
         try {
-            await signOut()
+            await logOut()
         } catch(err) {
             console.log(err)
         }
@@ -25,7 +25,7 @@ const Header = () => {
                 <Link to='/mylist'>My List</Link>
             </div>
             <div>
-                <GuestLogin color='#fff'/>
+                <GuestLogin color='#fff' guestLoginHandler={guestLoginHandler} guestLogin={guestLogin} />
                 {location==='/' ? <Link to='/signin'><button>Sign In</button></Link> : <Link to='/signin'><button onClick={signOutHandler}>Sign Out</button></Link>}
             </div>
         </header>

@@ -1,5 +1,4 @@
 const Feature = ({ featureData, index }) => {
-    console.log(index)
     return (
         <div className={`app-feature ${ index%2===0 ? 'app-feature-row-reverse' : 'app-feature-row' }`}>
             <section>

@@ -2,7 +2,7 @@ import Header from "./Header";
 import Contents from "./Contents";
 import Footer from "./Footer";
 
-const Movies = () => {
+const Movies = ({guestLoginHandler}) => {
     
     const contents = {
         type: 'movie',
@@ -14,7 +14,7 @@ const Movies = () => {
 
     return (
         <div className="movies">
-            <Header />
+            <Header guestLoginHandler={guestLoginHandler}/>
             <Contents contents={contents} />
             <Footer />
         </div>

@@ -3,7 +3,7 @@ import Header from './Header'
 import ReactPlayer from 'react-player/youtube'
 import EmptyCastImage from '../images/empty_cast_image.png'
 
-const ContentDetail = ({ id, api_key, contentType, addToList }) => {
+const ContentDetail = ({ id, api_key, contentType, addToList, guestLoginHandler }) => {
     
     const [cdshow, setCdshow] = useState({})
     const [cdcasts, setCdcasts] = useState([])
@@ -56,7 +56,7 @@ const ContentDetail = ({ id, api_key, contentType, addToList }) => {
             <img className='bg-contact-detail-img' style={{ height: showPlayer ? '108rem' : '65rem' }} src={`https://image.tmdb.org/t/p/w500/${cdshow.poster_path}`} alt={cdshow.poster_path} />
             
             <div className='header-contact-detail'>
-                <Header />
+                <Header  guestLoginHandler={guestLoginHandler}/>
 
                 {showPlayer ? <ReactPlayer className='video-player' controls={true} url={`https://www.youtube.com/watch?v=${trailer.key}`} /> : null}
                 

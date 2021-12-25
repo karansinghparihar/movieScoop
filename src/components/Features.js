@@ -5,7 +5,12 @@ import imgFeature2 from '../images/feature2.jpg'
 import imgFeature3 from '../images/feature3.png'
 import imgFeature4 from '../images/feature4.png'
 
+import { useUserAuth } from "../context/UserAuthContext";
+
 const Features = () => {
+
+    console.log(useUserAuth())
+
     const featureData = [
         {
             title:'Enjoy on your TV.',

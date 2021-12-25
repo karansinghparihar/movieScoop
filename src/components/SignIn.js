@@ -4,7 +4,7 @@ import netflixLogo from '../images/netflixLogo.png'
 import { useState } from 'react'
 import { useUserAuth } from "../context/UserAuthContext";
 
-const SignIn = () => {
+const SignIn = ({guestLoginHandler}) => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -17,7 +17,8 @@ const SignIn = () => {
         try {
             setErr('')
             await signIn(email, password)
-            navigate('/tvshows')
+            guestLoginHandler()
+            navigate('/')
         } catch(err) {
             setErr(err.message)
         }
