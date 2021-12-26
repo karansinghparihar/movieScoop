@@ -51,10 +51,20 @@ header img {
 .guest-login {
     font-size: 1.25rem;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
-
-.guest-login.guest-login-diasbled {
+.guest-login:hover{
+    cursor: pointer;
+    transform: scale(1.08);
+}
+.guest-login-disabled {
+    font-size: 1.25rem;
+    width: 100%;
     pointer-events:none;
+}
+.guest-login-disabled:hover{
+    cursor: none ;
 }
 
 header button {
@@ -81,7 +91,7 @@ header button {
     border-radius: 3px;
 }
 
-.select-lang {
+.logged-in-user {
     width: 10rem;
     height: 3.2rem;
     background: #000;
@@ -91,14 +101,20 @@ header button {
     font-family: 'FontAwesome', 'Second Font name';
     padding-left: 1rem;
 }
-.select-lang a {
+.guest-user {
+    width: 10rem;
+    height: 3.2rem;
+    background: #000;
+    font-size: 1.2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    font-family: 'FontAwesome', 'Second Font name';
+    padding-left: 1rem;
+}
+.guest-user a {
     width: inherit;
     text-decoration: none;
     color: #fff;
-}
-.select-lang:hover {
-    cursor: pointer;
-    transform: scale(1.08);
 }
 
 .home {
@@ -397,6 +413,8 @@ footer h2 {
     transform: scale(1.08);
 }
 
-.mylists {
+.mylist {
     color: #fff;
+    text-align: center;
+    margin-top: 13rem;
 }

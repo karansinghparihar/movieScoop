@@ -4,8 +4,9 @@ const MyList = (props) => {
     
     console.log(props.myList)
     return (
-        <div className='mylists'>
-            <h1> My Lists </h1>
+        <div className='mylist'>
+            <h1> My List is in development stage... </h1>
+            <h2>Thank you for patience!</h2>
         </div>
     )
 }

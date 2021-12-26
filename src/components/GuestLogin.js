@@ -8,7 +8,7 @@ const GuestLogin = ({ color }) => {
     const guestLoginHandler = async() => {
         try {
             await guestLogin()
-            navigate('/movies')
+            navigate('/tvshows')
         } catch(err) {
             console.log(err)
         }
@@ -16,8 +16,8 @@ const GuestLogin = ({ color }) => {
 
     return (
         <>
-            <div className="select-lang" style={{ color: color }}>
-                <div className={`guest-login ${guest ? 'guest-login-diasbled' : ''}`} onClick={guestLoginHandler}><h3>&nbsp;{guest ? 'Guest User' : 'Hi, Guest'}</h3></div>
+            <div className="guest-user" style={{ color: color }}>
+                <div className={`${guest ? 'guest-login-disabled' : 'guest-login'}`} onClick={guestLoginHandler}><h3>&nbsp;{guest ? 'Guest User' : 'Hi, Guest'}</h3></div>
             </div> 
         </>
     )
