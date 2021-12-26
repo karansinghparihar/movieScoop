@@ -19,8 +19,6 @@ export const Search = () => {
         getSearchItems()
     }, [searchTerm, content])
 
-    console.log(searchItems, searchTerm)
-
     const fetchSearchItems = async () => {
         const res = await fetch(`https://api.themoviedb.org/3/search/${content}?api_key=${api_key}&query=${searchTerm}`)
         const searchResults = await res.json()

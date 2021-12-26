@@ -3,6 +3,7 @@ import Header from './Header'
 import ReactPlayer from 'react-player/youtube'
 import EmptyCastImage from '../images/empty_cast_image.png'
 import EmptyBackdrop from '../images/emptyBackdrop.jpg'
+import Footer from './Footer'
 
 const ContentDetail = ({ id, api_key, contentType }) => {
 
@@ -92,6 +93,7 @@ const ContentDetail = ({ id, api_key, contentType }) => {
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         </div>
     )
