@@ -37,7 +37,7 @@ const Header = () => {
                     <div className=''><h3>&nbsp;{loggedInUser}</h3></div>
                 </div>
                     : <GuestLogin color='#fff' />}
-                {user ? <Link to='/signin'><button style={{ marginRight: '4rem' }} onClick={signOutHandler}>Sign Out</button></Link> : <Link to='/signin'><button>Sign In</button></Link>}
+                {user ? <Link to='/signin'><button onClick={signOutHandler}>Sign Out</button></Link> : <Link to='/signin'><button>Sign In</button></Link>}
             </div>
         </header>
     )
