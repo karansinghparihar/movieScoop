@@ -249,6 +249,9 @@ footer h2 {
     text-align: center;
 
 }
+.content:hover {
+    transform: scale(1.2);
+}
 .content-list {
     width: 20rem;
     display: flex;
@@ -310,7 +313,7 @@ footer h2 {
     flex-flow: row wrap;
 }
 .content-detail-cast img {
-    width: 19.45rem;
+    width: 19.3rem;
     margin-left: 0.25rem;
     margin-right: 1.75rem;
 }

@@ -36,7 +36,7 @@ const Footer = () => {
                     return <FooterLinks key={index} foLink={foLink} />
                 })
             }
-            <br /><h3 className='footer-country'><i className='fa fa-globe'></i>&nbsp;Netflix India</h3>
+            <h3 className='footer-country'><i className='fa fa-globe'></i>&nbsp;Netflix India</h3>
         </footer>
     )
 }
