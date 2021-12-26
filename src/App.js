@@ -14,23 +14,17 @@ import Tvshows from './components/Tvshows';
 import Tvshow from './components/Tvshow';
 import SignIn from './components/SignIn';
 import Signup from './components/Signup';
-import MyList from './components/MyList';
+import Search from './components/Search';
 import { UserAuthContextProvider } from './context/UserAuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
 
   const [isLoading, setIsLoading] = useState(true)
-  const [myList, setMyList] = useState({})
 
   useEffect(() => {
     setIsLoading(false)
   })
-
-  const addToList = (list) => {
-    console.log(list)
-    setMyList(list)
-  }
 
   return (
     <div className='app'>
@@ -57,8 +51,9 @@ function App() {
           <Route exact path='/movie/:id' element={<ProtectedRoute><Movie /></ProtectedRoute>}></Route>
           <Route exact path='/tvshows' element={<ProtectedRoute><Tvshows /></ProtectedRoute>}></Route>
           <Route exact path='/tvshow/:id' element={<ProtectedRoute><Tvshow /></ProtectedRoute>}></Route>
-          <Route exact path='/mylist' element={<ProtectedRoute><MyList /></ProtectedRoute>}></Route>
-
+          <Route exact path='/search' element={<ProtectedRoute><Search /></ProtectedRoute>}></Route>
+          <Route exact path='/search/movie/:id' element={<ProtectedRoute><Movie /></ProtectedRoute>}></Route>
+          <Route exact path='/search/tv/:id' element={<ProtectedRoute><Tvshow /></ProtectedRoute>}></Route>
           <Route exact path='/signin' element={<SignIn />}></Route>
           <Route exact path='/signup' element={<Signup />}></Route>
         </Routes>

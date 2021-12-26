@@ -35,7 +35,7 @@ header img {
 }
 .nav-links {
     color: #fff;
-    width: 35%;
+    width: 44%;
 }
 .nav-links a {
     font-size: 1.25rem;
@@ -413,8 +413,94 @@ footer h2 {
     transform: scale(1.08);
 }
 
-.mylist {
+.bg-search {
+    position: relative;
+}
+.bg-search-image {
+    opacity: 0.4;
+    width: 100%;
+}
+.search {
+    float: left;
+    position: absolute;
+    left: 5%;
+    top: 12%;
+    z-index: 1000;
+    color: #fff;
+    width: 90%;
+}
+.search input {
+    background: rgba(0, 0, 0, 0.6);
     color: #fff;
     text-align: center;
-    margin-top: 13rem;
+    border-radius: 6px;
+    margin: auto;
+    width: 100%;
+    height: 4rem;
+    font-size: 2rem;
+    font-family: 'FontAwesome', 'Second Font name';
+}
+
+.search-filters {
+    display: flex;
+    justify-content: space-evenly;
+    height: 3.5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 0.4rem;
+    margin: 2rem 0rem;
+    cursor: pointer;
+}
+.search h2 {
+    font-size: 2.5rem;
+}
+.search button {
+    height: 3.5rem;
+    width: 12.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+.search button:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+.search-list {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.content-image-null {
+    width: 500px;
+    height: 281px ;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+}
+.content-image-null img {
+    width: inherit;
+    height: inherit;
+
+}
+.search > a > img {
+    width: 15.5rem;
+    opacity: 1 !important;
+    top: -9rem;
+    left: 4%;
+    z-index: 1000;
+    position: absolute;
+}
+.search img:hover {
+    transform: scale(1.08);
+}
+
+.content-search {
+    margin: 0rem 0rem 5rem 0rem;
+    cursor: pointer;
 }

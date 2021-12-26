@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react'
 import Header from './Header'
 import ReactPlayer from 'react-player/youtube'
 import EmptyCastImage from '../images/empty_cast_image.png'
+import EmptyBackdrop from '../images/emptyBackdrop.jpg'
 
-const ContentDetail = ({ id, api_key, contentType, addToList }) => {
-    
+const ContentDetail = ({ id, api_key, contentType }) => {
+
     const [cdshow, setCdshow] = useState({})
     const [cdcasts, setCdcasts] = useState([])
     const [rating, setRating] = useState([])
@@ -54,29 +55,30 @@ const ContentDetail = ({ id, api_key, contentType, addToList }) => {
     return (
         <div className='bg-contact-detail'>
             <img className='bg-contact-detail-img' style={{ height: showPlayer ? '108rem' : '65rem' }} src={`https://image.tmdb.org/t/p/w500/${cdshow.poster_path}`} alt={cdshow.poster_path} />
-            
+
             <div className='header-contact-detail'>
                 <Header />
 
                 {showPlayer ? <ReactPlayer className='video-player' controls={true} url={`https://www.youtube.com/watch?v=${trailer.key}`} /> : null}
-                
+
                 <div className='content-detail'>
-                    
-                    <img style={{ width: '100%' }} src={`https://image.tmdb.org/t/p/w500/${cdshow.poster_path}`} alt={cdshow.poster_path} />
-                    
+
+                    {   cdshow.poster_path === null ? <img src={EmptyBackdrop} alt={EmptyBackdrop} /> :
+                        <img style={{ width: '100%' }} src={`https://image.tmdb.org/t/p/w500/${cdshow.poster_path}`} alt={cdshow.poster_path} />
+                    }
+
                     <div className='content-detail-details'>
                         <div className='content-detail-list'>
                             <h1>{contentType === 'tv' ? cdshow.name : cdshow.original_title}</h1><br />
-                            <div onClick={() => addToList(cdshow)}><i className="fa fa-plus"></i>&nbsp;My List</div>
                         </div>
 
                         <h3>{cdshow.overview}</h3><br />
-                        
+
                         <div className='content-detail-trailer'>
                             {rating == null ? <h2> Ratings : NA</h2> : <h2>Rating : {rating.length > 0 ? rating[0].rating : 'NA'}</h2>}
                             {trailer == null ? <h2>Trailer Not available</h2> : showPlayer ? <div onClick={() => setShowPlayer(false)}><i style={{ color: 'red' }} className="fa fa-stop"></i>&nbsp;Close Trailer</div> : <div onClick={() => setShowPlayer(true)}><i style={{ color: 'red' }} className="fa fa-youtube-play"></i>&nbsp;Watch Trailer</div>}
                         </div>
-                        
+
                         <h2>Cast</h2><br />
                         <div className='content-detail-casts'>
                             {
