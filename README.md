@@ -1,7 +1,7 @@
 
 # Netflix Clone
 
-- **Netflix Clone made with React, Context API, Protected Routes, Guest Login and Firebase**
+- **Netflix Clone by {Karan Singh Parihar} made with React, Context API, Protected Routes, Guest Login and Firebase**
 
 ---
 
