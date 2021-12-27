@@ -76,7 +76,7 @@ Netflix clone made with advanced react, context-api, protected routes & firebase
 
 ## Author
 
-- Karan Singh Parihar
+- Karan Singh Parihar: [Link](https://www.linkedin.com/in/karan-singh-parihar-291813153/)
 
 ---
 
