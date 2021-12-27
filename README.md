@@ -28,7 +28,7 @@
 
 ### Live Site Demo
 
-Website Link: [Link](https://netflix-karan.netlify.app/)
+Website: [Link](https://netflix-karan.netlify.app/)
 
 ---
 
