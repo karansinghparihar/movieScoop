@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import NetflixBg from '../images/netflixBg.png'
 import netflixLogo from '../images/netflixLogo.png'
-import ReactGoogleButton from 'react-google-button'
 import { useState } from 'react'
 import { useUserAuth } from "../context/UserAuthContext";
 
@@ -46,7 +45,7 @@ const SignIn = () => {
                     <input type='email' value={email} placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
                     <input type='password' value={password} placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
                     <button type='submit'>Sign In</button><hr />
-                    <ReactGoogleButton onClick={googleSignInHandler} style={{ fontSize: '1.5rem', width: '30rem', margin: '2rem 0rem', borderRadius: '0.3rem' }} />
+                    <button onClick={googleSignInHandler} style={{ background: '#4884f4', borderColor: '#4884f4' }}><link rel="shortcut icon" href="https://www.google.com/favicon.ico" />&#xf1a0;&nbsp;&nbsp;Sign in with Google</button><hr />
                     <div className="signin-footer">
                         New to Netflix?<Link to='/signup'>Sign up now.</Link>
                     </div>

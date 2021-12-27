@@ -20,11 +20,11 @@ const Content = ({ content, contentType, searchType }) => {
                 <h3 style={{textAlign: 'center'}}>{`${searchType === 'movie' ? original_title : name}`}</h3>
             </> : <>
                 <Link to={`/${contentType}/${id}`}>
-                    {backdrop_path === null ? <div className='content-image-null'>No Image</div> :
+                    {backdrop_path === null ? <div><img style={{ height: '19.8rem' }} src={EmptyBackdrop} alt={EmptyBackdrop} /></div> :
                         <img src={`https://image.tmdb.org/t/p/w500/${backdrop_path}`} alt={`${contentType === 'tv' ? name : original_title} `} />
                     }
                 </Link>
-                <h3 style={{color: 'white', textAlign: 'center'}}>{`${contentType === 'movie' ? original_title : name}`}</h3>
+                <h3 style={{color: 'white', textAlign: 'center', marginBottom: '3rem'}}>{`${contentType === 'movie' ? original_title : name}`}</h3>
             </>
             }
 

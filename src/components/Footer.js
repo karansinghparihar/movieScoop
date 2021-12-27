@@ -2,6 +2,7 @@ import React from 'react'
 import FooterLinks from './FooterLinks'
 
 const Footer = () => {
+    const tmdbLogo = 'https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_1-5bdc75aaebeb75dc7ae79426ddd9be3b2be1e342510f8202baf6bffa71d7f5c4.svg'
     const foLinks = [
         {
             foLink1: 'FAQ',
@@ -37,6 +38,14 @@ const Footer = () => {
                 })
             }
             <h3 className='footer-country'><i className='fa fa-globe'></i>&nbsp;Netflix India</h3>
+            <div className='footer-copyright'>Copyright © 2021, Developed by Karan Singh Parihar
+            <a href='https://www.linkedin.com/in/karan-singh-parihar-291813153/' target='_blank'><button>&#xf0e1;</button></a>
+            <a href='https://github.com/karansinghparihar/netflixclone' target='_blank'><button>&#xf09b;</button></a>
+            <br />
+            Powered by &nbsp;
+            <a href='https://www.themoviedb.org/' target='_blank'><img src={tmdbLogo} style={{ width: '4rem' }} alt='mdb'/></a>
+            </div>
+            
         </footer>
     )
 }

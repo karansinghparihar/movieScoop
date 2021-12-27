@@ -1,6 +1,6 @@
 import Feature from "./Feature";
 import HorizontalSection from "./HorizontalSection";
-import imgFeature1 from '../images/feature1.png'
+import imgFeature1 from '../images/feature1.jpg'
 import imgFeature2 from '../images/feature2.jpg'
 import imgFeature3 from '../images/feature3.png'
 import imgFeature4 from '../images/feature4.png'

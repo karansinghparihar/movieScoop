@@ -49,7 +49,7 @@ header img {
 }
 
 .guest-login {
-    font-size: 1.25rem;
+    font-size: 1.12rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -218,7 +218,27 @@ footer h2 {
 .footer-country {
     padding: 0rem 0rem 2rem 18.7rem;
 }
-
+.footer-copyright {
+    font-size: 1.5rem;
+    text-align: center;
+}
+.footer-copyright button {
+    font-family: 'FontAwesome', 'Poppins';
+    height: 2.5rem;
+    width: 4.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0.4rem;
+    cursor: pointer;
+    margin: 0rem 0.5rem 0.5rem 1rem;
+}
+.footer-copyright button:hover {
+    transform: scale(1.08);
+}
+.footer-copyright > button > img{
+    width: 2rem;
+}
 .footer-links {
     width: 68%;
     margin: auto;
@@ -227,7 +247,7 @@ footer h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 3.7rem;
+    height: 3.97rem;
     align-items: center;
 }
 .footer-links h3 {
@@ -244,19 +264,24 @@ footer h2 {
     text-decoration: underline;
 }
 
+.contents {
+    width: 90%;
+    margin: auto;
+}
+
 .contents h2 {
     color:#fff;
     text-align: center;
-
 }
 .content:hover {
-    transform: scale(1.2);
+    transform: scale(1.08);
+    filter: brightness(120%);
 }
 .content-list {
-    width: 20rem;
+    width: 100%;
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
-    margin-left: 3rem;
 }
 .content {
     margin: 0rem 0.2rem auto;
@@ -346,9 +371,11 @@ footer h2 {
 
 .bg-signin {
     position: relative;
+    
 }
-.bg-signin img {
+.bg-signin > img {
     opacity: 0.4;
+    height: 100vh;
 }
 .logo-signin img {
     width: 15.5rem;
@@ -395,16 +422,18 @@ footer h2 {
 .signin button {
     height: 3.5rem;
     font-size: 1.4rem;
-    font-weight: bold;
     color: #fff;
     background: red;
     border-radius: 0.4rem;
+    border-color: red;
     margin: 2rem 0rem;
     cursor: pointer;
+    font-family: 'FontAwesome', 'Poppins';
 }
 .signin button:hover {
     transform: scale(1.08);
 }
+
 .signin-footer {
     display: flex;
     flex-direction: row;
@@ -427,6 +456,7 @@ footer h2 {
 .bg-search-image {
     opacity: 0.4;
     width: 100%;
+    height: 175vh;
 }
 .search {
     float: left;
@@ -486,7 +516,7 @@ footer h2 {
 
 .content-image-null {
     width: 32rem;
-    height: 32rem;
+    height: 30.4rem;
     color: #fff;
     text-align: center;
     background: rgba(0, 0, 0, 0.6);
