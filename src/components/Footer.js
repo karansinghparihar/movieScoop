@@ -11,21 +11,21 @@ const Footer = () => {
             foLink4: 'Media Centre',
         },
         {
-            foLink1: 'Investor Relations',
+            foLink1: 'Relations',
             foLink2: 'Jobs',
-            foLink3: 'Ways to Watch',
+            foLink3: 'Ways',
             foLink4: 'Terms of Use',
         },
         {
             foLink1: 'Privacy',
-            foLink2: 'Cookie Preferences',
-            foLink3: 'Corporate Information',
+            foLink2: 'Cookie',
+            foLink3: 'Corporate',
             foLink4: 'Contact Us',
         },
         {
             foLink1: 'Speed Test',
             foLink2: 'Legal Notices',
-            foLink3: 'Only on Netflix',
+            foLink3: 'Only',
             foLink4: '',
         }
     ]
