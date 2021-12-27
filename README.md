@@ -28,11 +28,7 @@
 
 ### Live Site Demo
 
-Demo: [Link](https://netflix-karan.netlify.app/)
-
-### Video Demo
-
-![demogif](Netflix-Clone.gif)
+Website Link: [Link](https://netflix-karan.netlify.app/)
 
 ---
 
@@ -40,7 +36,7 @@ Demo: [Link](https://netflix-karan.netlify.app/)
 
 - [React](https://github.com/facebook/react) 
   - Create-react-app with highly complex frontend structure
-- [Redux](https://reactjs.org/docs/context.html/) 
+- [Context API](https://reactjs.org/docs/context.html/) 
   - State management to share data across compenents & firebase auth
 - [Firebase](https://firebase.google.com/) 
   - Backend and database with firestore for users
@@ -55,17 +51,17 @@ Demo: [Link](https://netflix-karan.netlify.app/)
 
 ## Implementation Highlights
 
-Netflix clone made with advanced react, context-api & firebase which asynchronously fetch movie data of over 30 thousand movies from Tmdb api. Features include a multi-active searchbar, user signup and signin (with google signin service), play trailer, dynamically generated movie and tv show pages and an interactive UI replicated from the original netflix app.
+Netflix clone made with advanced react, context-api & firebase which asynchronously fetch movie data of over 30 thousand movies from Tmdb api. Features include guest login, multi-active searchbar, user signup and signin (with google signin service), play trailer, dynamically generated movie and tv show pages and an interactive UI replicated from the original netflix app.
 
 ### User Stories
 
 - Users can safely sign up and sign in, google sign in enabled with firebase
+- Search feature with filter active throughout the app.
+- Adding Guest Login functionality for end users.
 - Collections of popular movies and tvshows for recommendations
 - A searchbar to search through TMDB database of over 30000 movies
 - Movie and TV Pages dynamically generated for every single movie
 - Details include cast info, play trailer, description. 
-- Search feature with filter active throughout the app.
-- Adding Guest Login functionality for end users.
 - Original netflix UI replicated with highly organized and advanced css styling.
 
 ### Current Plans for Expansion
@@ -73,7 +69,7 @@ Netflix clone made with advanced react, context-api & firebase which asynchronou
 - Implement more features as a personal practice project
 - Add user profile data, profile picture and personal data setup
 - Add paginations and setup category sorting
-- Add python scraper to customize recommendations for each user
+- Add customize recommendations for each user
 - Move backend and database to node and express.
 
 ---
@@ -87,5 +83,6 @@ Netflix clone made with advanced react, context-api & firebase which asynchronou
 ## License
 
 - Full credit for API data to TMDB API.
+- Full credit for playing movie trailers to Youtube. 
 
 ---
