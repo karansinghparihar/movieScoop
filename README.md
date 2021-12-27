@@ -1,7 +1,7 @@
 
 # Netflix Clone
 
-- **Netflix Clone made with React, Context API and Firebase**
+- **Netflix Clone made with React, Context API, Protected Routes, Guest Login and Firebase**
 
 ---
 
@@ -51,7 +51,7 @@ Website: [Link](https://netflix-karan.netlify.app/)
 
 ## Implementation Highlights
 
-Netflix clone made with advanced react, context-api & firebase which asynchronously fetch movie data of over 30 thousand movies from Tmdb api. Features include guest login, multi-active searchbar, user signup and signin (with google signin service), play trailer, dynamically generated movie and tv show pages and an interactive UI replicated from the original netflix app.
+Netflix clone made with advanced react, context-api, protected routes & firebase which asynchronously fetch movie data of over 30 thousand movies from Tmdb api. Features include guest login, multi-active searchbar, user signup and signin (with google signin service), play trailer, dynamically generated movie and tv show pages and an interactive UI replicated from the original netflix app.
 
 ### User Stories
 
