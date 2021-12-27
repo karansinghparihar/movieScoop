@@ -28,7 +28,13 @@
 
 ### Live Site Demo
 
-Website: [LinkedIn](https://netflix-karan.netlify.app/)
+Website: [Link](https://netflix-karan.netlify.app/)
+
+---
+
+## Author
+
+- Karan Singh Parihar: [LinkedIn](https://www.linkedin.com/in/karan-singh-parihar-291813153/)
 
 ---
 
@@ -71,12 +77,6 @@ Netflix clone made with advanced react, context-api, protected routes & firebase
 - Add paginations and setup category sorting
 - Add customize recommendations for each user
 - Move backend and database to node and express.
-
----
-
-## Author
-
-- Karan Singh Parihar: [Link](https://www.linkedin.com/in/karan-singh-parihar-291813153/)
 
 ---
 
