@@ -10,11 +10,13 @@ export const Contents = ({ contents }) => {
     const topUrl = `https://api.themoviedb.org/3/${contents.type}/top_rated?api_key=${api_key}`
     const nowUrl = `https://api.themoviedb.org/3/${contents.type}/${contents.nowPath}?api_key=${api_key}`
 
-    const [trendContents, setTrendContents] = useState([])
-    const [popContents, setPopContents] = useState([])
-    const [upcomContents, setUpcompContents] = useState([])
-    const [topContents, setTopContents] = useState([])
-    const [nowContents, setNowContents] = useState([])
+    const [contentsData, setContentsData] = useState({
+        trendContents: [],
+        popContents: [],
+        upcomContents: [],
+        topContents: [],
+        nowContents: []
+    })
 
     useEffect(() => {
         const getContents = async () => {
@@ -24,18 +26,22 @@ export const Contents = ({ contents }) => {
             const topRes = await fetchContents(topUrl)
             const nowRes = await fetchContents(nowUrl)
 
-            setTrendContents(trendRes.results)
-            setPopContents(popRes.results)
-            setUpcompContents(upcomRes.results)
-            setTopContents(topRes.results)
-            setNowContents(nowRes.results)
+            setContentsData({
+                trendContents: trendRes.results,
+                popContents: popRes.results,
+                upcomContents: upcomRes.results,
+                topContents: topRes.results,
+                nowContents: nowRes.results
+            })
 
             return () => {
-                setTrendContents([])
-                setPopContents([])
-                setUpcompContents([])
-                setTopContents([])
-                setNowContents([])
+                setContentsData({
+                    trendContents: [],
+                    popContents: [],
+                    upcomContents: [],
+                    topContents: [],
+                    nowContents: []
+                })
             }
         }
         getContents()
@@ -69,19 +75,20 @@ export const Contents = ({ contents }) => {
         }
     }
 
-    let contentsEmpty = false
-    if (trendContents.length ===0 || popContents.length ===0 || upcomContents.length ===0 || topContents.length ===0 || nowContents.length ===0) {
-        contentsEmpty = true
+    let contentsDataEmpty = false
+    if (Object.keys(contentsData.trendContents).length === 0 && Object.keys(contentsData.popContents).length === 0 && Object.keys(contentsData.upcomContents).length === 0 && Object.keys(contentsData.topContents).length === 0 && Object.keys(contentsData.nowContents).length === 0 ) {
+        contentsDataEmpty = true
+        console.log(contentsDataEmpty)
     }
 
     return (
         <div className="contents">
-            {contentsEmpty ? <h2>Loading...</h2> : <>
-                <ContentList contentType={contents.contentType} contents={trendContents} heading={`Trending ${contents.heading}`} />
-                <ContentList contentType={contents.contentType} contents={popContents} heading='Popular on Netflix' />
-                <ContentList contentType={contents.contentType} contents={upcomContents} heading={`Upcoming ${contents.heading}`} />
-                <ContentList contentType={contents.contentType} contents={topContents} heading='Top Rated' />
-                <ContentList contentType={contents.contentType} contents={nowContents} heading='Now Playing' />
+            {contentsDataEmpty ? <h2>Loading...</h2> : <>
+                <ContentList contentType={contents.contentType} contents={contentsData.trendContents} heading={`Trending ${contents.heading}`} />
+                <ContentList contentType={contents.contentType} contents={contentsData.popContents} heading='Popular on Netflix' />
+                <ContentList contentType={contents.contentType} contents={contentsData.upcomContents} heading={`Upcoming ${contents.heading}`} />
+                <ContentList contentType={contents.contentType} contents={contentsData.topContents} heading='Top Rated' />
+                <ContentList contentType={contents.contentType} contents={contentsData.nowContents} heading='Now Playing' />
             </>}
         </div>
     )

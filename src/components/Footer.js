@@ -43,7 +43,7 @@ const Footer = () => {
             <a href='https://github.com/karansinghparihar/netflixclone' target='_blank'><button>&#xf09b;</button></a>
             <br />
             Powered by &nbsp;
-            <a href='https://www.themoviedb.org/' target='_blank'><img src={tmdbLogo} style={{ width: '4rem' }} alt='mdb'/></a>
+            <a href='https://www.themoviedb.org/' rel="noreferrer" target='_blank'><img src={tmdbLogo} style={{ width: '4rem' }} alt='tmdb'/></a>
             </div>
             
         </footer>

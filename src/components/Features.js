@@ -32,7 +32,7 @@ const Features = () => {
     return (
         <>
             {
-                featureData.map((feature, index) => <><Feature key={index} featureData={feature} index={index+1} /> <HorizontalSection /></> )
+                featureData.map((feature, index) => <><Feature key={index} featureData={feature} index={index+1} /><HorizontalSection /></> )
             }
         </>
     )
