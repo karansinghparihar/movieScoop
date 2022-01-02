@@ -1,7 +1,7 @@
 
 # Netflix Clone
 
-- **Netflix Clone by {Karan Singh Parihar} made with React, Context API, Protected Routes, Guest Login and Firebase**
+- **Netflix Clone by {Karan Singh Parihar} made with React, Redux, Context API, Protected Routes and Firebase**
 
 ---
 
@@ -42,6 +42,8 @@ Website: [Link](https://netflix-karan.netlify.app/)
 
 - [React](https://github.com/facebook/react) 
   - Create-react-app with highly complex frontend structure
+- [Redux](https://redux.js.org/) 
+  - State management for my List component
 - [Context API](https://reactjs.org/docs/context.html/) 
   - State management to share data across compenents & firebase auth
 - [Firebase](https://firebase.google.com/) 
@@ -57,7 +59,7 @@ Website: [Link](https://netflix-karan.netlify.app/)
 
 ## Implementation Highlights
 
-Netflix clone made with advanced react, context-api, protected routes & firebase which asynchronously fetch movie data of over 30 thousand movies from Tmdb api. Features include guest login, multi-active searchbar, user signup and signin (with google signin service), play trailer, dynamically generated movie and tv show pages and an interactive UI replicated from the original netflix app.
+Netflix clone made with advanced react, redux, context-api, protected routes & firebase which asynchronously fetch movie data of over 30 thousand movies from Tmdb api. Features include guest login, favourites list, multi-active searchbar, user signup and signin (with google signin service), play trailer, dynamically generated movie and tv show pages and an interactive UI replicated from the original netflix app.
 
 ### User Stories
 
@@ -65,6 +67,7 @@ Netflix clone made with advanced react, context-api, protected routes & firebase
 - Search feature with filter active throughout the app.
 - Adding Guest Login functionality for end users.
 - Collections of popular movies and tvshows for recommendations
+- Users can add their favourite movies and tv shows in my list tab. 
 - A searchbar to search through TMDB database of over 30000 movies
 - Movie and TV Pages dynamically generated for every single movie
 - Details include cast info, play trailer, description. 
