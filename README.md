@@ -1,70 +1,90 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Netflix Clone
 
-## Available Scripts
+- **Netflix Clone by {Karan Singh Parihar} made with React, Redux, Context API, Protected Routes and Firebase**
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Quick Links
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Demo](#demo)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Live Site](#live-site-demo)
 
-### `npm test`
+[Tech Stack](#tech-stack)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[About](#Implementation-Hightlights)
 
-### `npm run build`
+- [Plans for Expansion](#future-plans-for-expansion)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Author](#author)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[License](#license)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Demo
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Live Site Demo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Website: [Link](https://netflix-karan.netlify.app/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Author
 
-## Learn More
+- Karan Singh Parihar: [LinkedIn](https://www.linkedin.com/in/karan-singh-parihar-291813153/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Tech Stack
 
-### Code Splitting
+- [React](https://github.com/facebook/react) 
+  - Create-react-app with highly complex frontend structure
+- [Redux](https://redux.js.org/) 
+  - State management for my List component
+- [Context API](https://reactjs.org/docs/context.html/) 
+  - State management to share data across compenents & firebase auth
+- [Firebase](https://firebase.google.com/) 
+  - Backend and database with firestore for users
+- [TMDB API](https://www.themoviedb.org/?language=en-US)
+  - Movie service API
+- [React Router](https://reacttraining.com/react-router/web/guides/quick-start) 
+  - Complex and dynamic route generation 
+- [React Player](https://www.npmjs.com/package/react-player/)
+  - For adding youtube player
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Implementation Highlights
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Netflix clone made with advanced react, redux, context-api, protected routes & firebase which asynchronously fetch movie data of over 30 thousand movies from Tmdb api. Features include guest login, favourites list, multi-active searchbar, user signup and signin (with google signin service), play trailer, dynamically generated movie and tv show pages and an interactive UI replicated from the original netflix app.
 
-### Making a Progressive Web App
+### User Stories
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Users can safely sign up and sign in, google sign in enabled with firebase
+- Search feature with filter active throughout the app.
+- Adding Guest Login functionality for end users.
+- Collections of popular movies and tvshows for recommendations
+- Users can add their favourite movies and tv shows in my list tab. 
+- A searchbar to search through TMDB database of over 30000 movies
+- Movie and TV Pages dynamically generated for every single movie
+- Details include cast info, play trailer, description. 
+- Original netflix UI replicated with highly organized and advanced css styling.
 
-### Advanced Configuration
+### Current Plans for Expansion
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Implement more features as a personal practice project
+- Add user profile data, profile picture and personal data setup
+- Add paginations and setup category sorting
+- Add customize recommendations for each user
+- Move backend and database to node and express.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `npm run build` fails to minify
+- Full credit for API data to TMDB API.
+- Full credit for playing movie trailers to Youtube. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
