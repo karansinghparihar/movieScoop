@@ -17,6 +17,7 @@ import Signup from './components/Signup';
 import Search from './components/Search';
 import { UserAuthContextProvider } from './context/UserAuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
+import MyList from './components/MyList';
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
           <Route exact path='/search' element={<ProtectedRoute><Search /></ProtectedRoute>}></Route>
           <Route exact path='/search/movie/:id' element={<ProtectedRoute><Movie /></ProtectedRoute>}></Route>
           <Route exact path='/search/tv/:id' element={<ProtectedRoute><Tvshow /></ProtectedRoute>}></Route>
+          <Route exact path='/mylist' element={<MyList />}></Route>
           <Route exact path='/signin' element={<SignIn />}></Route>
           <Route exact path='/signup' element={<Signup />}></Route>
         </Routes>

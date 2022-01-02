@@ -35,7 +35,7 @@ header img {
 }
 .nav-links {
     color: #fff;
-    width: 44%;
+    width: 50%;
 }
 .nav-links a {
     font-size: 1.25rem;
@@ -545,4 +545,45 @@ footer h2 {
 .content-search > a > img {
     width: 30rem;
     height: 30rem;
+}
+
+.add-to-list {
+    cursor: pointer;
+    font-size: 2rem;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.4rem;
+}
+.add-to-list:hover {
+    transform: scale(1.08);
+}
+.add-to-list.disabled {
+    pointer-events:none;  
+}
+.my-list {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.my-list-item {
+    margin: 1rem;
+    color: #fff;
+    width: 18.9rem;
+    height: 32rem;
+    border-radius: 0.5rem;
+}
+.my-list-item:hover {
+    transform: scale(1.08);
+    filter: brightness(120%);
+    cursor: pointer;
+}
+.my-list-item h3 {
+    text-align: center;
+}
+.added-in-list {
+    color: red;
+    font-size: 2rem;
+    margin-left: 2rem;
 }

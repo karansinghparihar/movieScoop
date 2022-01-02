@@ -28,6 +28,7 @@ const Header = () => {
                 <Link to='/'><img src={netflixLogo} alt={netflixLogo} /></Link>
                 <Link to='/movies'>Movies</Link>
                 <Link to='/tvshows'>TV Shows</Link>
+                <Link to='/mylist'>My List</Link>
                 <Link to='/search'><div className="logged-in-user" style={{ width: '11.5rem' }}>&#xf002; Search Content</div></Link>
             </div>
             <div style={{ width: '21%' }}>
