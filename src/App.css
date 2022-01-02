@@ -553,6 +553,9 @@ footer h2 {
     color: #fff;
     border: 1px solid #fff;
     padding: 0.4rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    border-radius: 0.4rem;
 }
 .add-to-list:hover {
     transform: scale(1.08);
