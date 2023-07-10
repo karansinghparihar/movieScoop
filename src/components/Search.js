@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export const Search = () => {
 
-    const api_key = process.env.React_App_Api_Key
+    const api_key = process.env.REACT_APP_API_KEY
     const [searchTerm, setSearchTerm] = useState('')
     const [searchItems, setSearchItems] = useState([])
     const [content, setContent] = useState('movie')

@@ -3,7 +3,7 @@ import ContentList from "./ContentList";
 
 export const Contents = ({ contents }) => {
 
-    const api_key = process.env.React_App_Api_Key
+    const api_key = process.env.REACT_APP_API_KEY
     const trendUrl = `https://api.themoviedb.org/3/trending/${contents.type}/day?api_key=${api_key}`
     const popUrl = `https://api.themoviedb.org/3/${contents.type}/popular?api_key=${api_key}`
     const upcomUrl = `https://api.themoviedb.org/3/${contents.type}/${contents.upcomPath}?api_key=${api_key}`
