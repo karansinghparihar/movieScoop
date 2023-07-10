@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/movieScoop/static/css/main.e9fda06c.css",
-    "main.js": "/movieScoop/static/js/main.86541bb3.js",
-    "static/media/netflixBg.png": "/movieScoop/static/media/netflixBg.247f90de1d29e4740369.png",
-    "static/media/feature4.png": "/movieScoop/static/media/feature4.17d95615abd75330ddf0.png",
-    "static/media/feature3.png": "/movieScoop/static/media/feature3.ff81d825b399d890f9b4.png",
-    "static/media/feature1.jpg": "/movieScoop/static/media/feature1.18e49f44a8ec10feebe9.jpg",
-    "static/media/emptyBackdrop.jpg": "/movieScoop/static/media/emptyBackdrop.7c8e02ccd51dde017002.jpg",
-    "static/media/feature2.jpg": "/movieScoop/static/media/feature2.063578d5b6d5ab4155ec.jpg",
-    "static/media/netflixLogo.png": "/movieScoop/static/media/netflixLogo.774e8c1632ac9433608b.png",
-    "index.html": "/movieScoop/index.html",
-    "main.e9fda06c.css.map": "/movieScoop/static/css/main.e9fda06c.css.map",
-    "main.86541bb3.js.map": "/movieScoop/static/js/main.86541bb3.js.map"
+    "main.css": "/static/css/main.e9fda06c.css",
+    "main.js": "/static/js/main.fa12eb8e.js",
+    "static/media/netflixBg.png": "/static/media/netflixBg.247f90de1d29e4740369.png",
+    "static/media/feature4.png": "/static/media/feature4.17d95615abd75330ddf0.png",
+    "static/media/feature3.png": "/static/media/feature3.ff81d825b399d890f9b4.png",
+    "static/media/feature1.jpg": "/static/media/feature1.18e49f44a8ec10feebe9.jpg",
+    "static/media/emptyBackdrop.jpg": "/static/media/emptyBackdrop.7c8e02ccd51dde017002.jpg",
+    "static/media/feature2.jpg": "/static/media/feature2.063578d5b6d5ab4155ec.jpg",
+    "static/media/netflixLogo.png": "/static/media/netflixLogo.774e8c1632ac9433608b.png",
+    "index.html": "/index.html",
+    "main.e9fda06c.css.map": "/static/css/main.e9fda06c.css.map",
+    "main.fa12eb8e.js.map": "/static/js/main.fa12eb8e.js.map"
   },
   "entrypoints": [
     "static/css/main.e9fda06c.css",
-    "static/js/main.86541bb3.js"
+    "static/js/main.fa12eb8e.js"
   ]
 }
