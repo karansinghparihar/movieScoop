@@ -27,7 +27,7 @@
 
 ### Live Site Demo
 
-Website: [Link](https://movieScoop-karan.netlify.app/)
+Website: [Link](https://moviescoop.pages.dev/)
 
 ---
 
