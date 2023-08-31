@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ContentList from "./ContentList";
+import Loader from "./Loader";
 
 export const Contents = ({ contents }) => {
 
@@ -45,7 +46,7 @@ export const Contents = ({ contents }) => {
             }
         }
         getContents()
-    })
+    }, [])
 
     const fetchContents = async (url) => {
         if (url === trendUrl) {
@@ -76,20 +77,24 @@ export const Contents = ({ contents }) => {
     }
 
     let contentsDataEmpty = false
-    if (Object.keys(contentsData.trendContents).length === 0 && Object.keys(contentsData.popContents).length === 0 && Object.keys(contentsData.upcomContents).length === 0 && Object.keys(contentsData.topContents).length === 0 && Object.keys(contentsData.nowContents).length === 0 ) {
+    if (Object.keys(contentsData.trendContents).length === 0 && Object.keys(contentsData.popContents).length === 0 && Object.keys(contentsData.upcomContents).length === 0 && Object.keys(contentsData.topContents).length === 0 && Object.keys(contentsData.nowContents).length === 0) {
         contentsDataEmpty = true
         console.log(contentsDataEmpty)
     }
 
+    if (contentsDataEmpty) {
+        return <Loader />
+    }
+
     return (
         <div className="contents">
-            {contentsDataEmpty ? <h2>Loading...</h2> : <>
-                <ContentList contentType={contents.contentType} contents={contentsData.trendContents} heading={`Trending ${contents.heading}`} />
-                <ContentList contentType={contents.contentType} contents={contentsData.popContents} heading='Popular on Netflix' />
-                <ContentList contentType={contents.contentType} contents={contentsData.upcomContents} heading={`Upcoming ${contents.heading}`} />
-                <ContentList contentType={contents.contentType} contents={contentsData.topContents} heading='Top Rated' />
-                <ContentList contentType={contents.contentType} contents={contentsData.nowContents} heading='Now Playing' />
-            </>}
+            {/* {contentsDataEmpty ? <h2>Loading...</h2> : <> */}
+            <ContentList contentType={contents.contentType} contents={contentsData.trendContents} heading={`Trending ${contents.heading}`} />
+            <ContentList contentType={contents.contentType} contents={contentsData.popContents} heading='Popular on Netflix' />
+            <ContentList contentType={contents.contentType} contents={contentsData.upcomContents} heading={`Upcoming ${contents.heading}`} />
+            <ContentList contentType={contents.contentType} contents={contentsData.topContents} heading='Top Rated' />
+            <ContentList contentType={contents.contentType} contents={contentsData.nowContents} heading='Now Playing' />
+            {/* </>} */}
         </div>
     )
 }

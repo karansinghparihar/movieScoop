@@ -16,7 +16,6 @@ const Tvshows = () => {
         <div className="tvshows">
             <Header />
             <Contents contents={contents} />
-            <Footer />
         </div>
     )
 }

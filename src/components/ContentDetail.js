@@ -6,6 +6,7 @@ import EmptyBackdrop from '../images/emptyBackdrop.jpg'
 import Footer from './Footer'
 import { useDispatch } from 'react-redux'
 import { AddToList } from '../redux/actions/AddToListAction'
+import Loader from './Loader'
 
 const ContentDetail = ({ id, api_key, contentType }) => {
     const [detail, setDetail] = useState({
@@ -69,6 +70,10 @@ const ContentDetail = ({ id, api_key, contentType }) => {
         contentDetailEmpty = true
     }
 
+    if (contentDetailEmpty) {
+        return <Loader />
+    }
+
     return (
         <div className='bg-contact-detail'>
             <img className='bg-contact-detail-img' style={{ height: showPlayer ? '108rem' : '65rem' }} src={`https://image.tmdb.org/t/p/w500/${detail.cdshow.poster_path}`} alt={detail.cdshow.poster_path} />
@@ -84,7 +89,7 @@ const ContentDetail = ({ id, api_key, contentType }) => {
 
                             {
                                 detail.cdshow.poster_path === null ? <img src={EmptyBackdrop} alt={EmptyBackdrop} /> :
-                                    <img style={{ width: '100%' }} src={`https://image.tmdb.org/t/p/w500/${detail.cdshow.poster_path}`} alt={detail.cdshow.poster_path} />
+                                    <img style={{ width: '100%', borderRadius: '8px' }} src={`https://image.tmdb.org/t/p/w500/${detail.cdshow.poster_path}`} alt={detail.cdshow.poster_path} />
                             }
 
                             <div className='content-detail-details'>
@@ -100,13 +105,13 @@ const ContentDetail = ({ id, api_key, contentType }) => {
                                 <div className='content-detail-trailer'>
                                     {detail.cdshow.vote_average === '' ? <h2> Ratings : NA</h2> : <h2>Rating :&nbsp;{detail.cdshow.vote_average}</h2>}
 
-                                    {detail.trailer == null ? <h2>Trailer Not available</h2> : showPlayer ? <div onClick={() => setShowPlayer(false)}><i style={{ color: 'red' }} className="fa fa-stop"></i>&nbsp;Close Trailer</div> : <div onClick={() => setShowPlayer(true)}><i style={{ color: 'red' }} className="fa fa-youtube-play"></i>&nbsp;Watch Trailer</div>}
+                                    {detail.trailer == null ? <h2>Trailer Not available</h2> : showPlayer ? <div onClick={() => setShowPlayer(false)}><i style={{ color: '#E50914' }} className="fa fa-stop"></i>&nbsp;Close Trailer</div> : <div onClick={() => setShowPlayer(true)}><i style={{ color: '#E50914' }} className="fa fa-youtube-play"></i>&nbsp;Watch Trailer</div>}
                                 </div>
 
                                 <h2>Cast</h2><br />
                                 <div className='content-detail-casts'>
                                     {
-                                        detail.cdcasts.slice(0, 4).map((cdcast, index) => {
+                                        detail.cdcasts.slice(0, 10).map((cdcast, index) => {
                                             return <div key={index} className='content-detail-cast'>
                                                 {cdcast.profile_path ? <img src={`https://image.tmdb.org/t/p/w500/${cdcast.profile_path}`} alt={cdcast.profile_path} /> : <img src={EmptyCastImage} alt={EmptyCastImage} />}
                                                 {cdcast.name ? <h2 style={{ textAlign: 'center' }}>{cdcast.name}</h2> : null}
@@ -118,7 +123,6 @@ const ContentDetail = ({ id, api_key, contentType }) => {
                         </div>
                     </>
                 }
-                <Footer />
             </div>
         </div>
     )

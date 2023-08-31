@@ -16,7 +16,6 @@ const Movies = () => {
         <div className="movies">
             <Header />
             <Contents contents={contents} />
-            <Footer />
         </div>
     )
 }

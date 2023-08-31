@@ -7,7 +7,7 @@ export const RegisterEmail = ({ content }) => {
             <form>
                 <input type='email' required placeholder="Email address"></input>
                 <Link to='/movies'>
-                    <button style={{ cursor: 'pointer', width: '13rem', padding: '0', background: 'red', color: 'white' }}>Get Started &nbsp;<i className="fa fa-chevron-right"></i></button>
+                    <button style={{ cursor: 'pointer', width: '13rem', padding: '0', background: '#E50914', color: 'white' }}>Get Started &nbsp;<i className="fa fa-chevron-right"></i></button>
                 </Link>
             </form>
         </div>
