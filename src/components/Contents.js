@@ -79,7 +79,6 @@ export const Contents = ({ contents }) => {
     let contentsDataEmpty = false
     if (Object.keys(contentsData.trendContents).length === 0 && Object.keys(contentsData.popContents).length === 0 && Object.keys(contentsData.upcomContents).length === 0 && Object.keys(contentsData.topContents).length === 0 && Object.keys(contentsData.nowContents).length === 0) {
         contentsDataEmpty = true
-        console.log(contentsDataEmpty)
     }
 
     if (contentsDataEmpty) {

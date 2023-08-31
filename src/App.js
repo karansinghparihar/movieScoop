@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     setIsLoading(false)
-  })
+  }, [])
 
   return (
     <div className='app'>
