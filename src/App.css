@@ -332,6 +332,7 @@ footer h2 {
 }
 
 .header-contact-detail {
+    width: 100%;
     float: left;
     position: absolute;
     left: 0rem;
@@ -356,18 +357,10 @@ footer h2 {
     /* margin-left: 3rem; */
 }
 
-.content-detail-details {
-    /* padding: 0rem 2rem; */
-}
-
 .content-detail-list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.content-detail-list div:hover {
-    transform: scale(1.08) !important;
 }
 
 .content-detail-casts {
@@ -375,6 +368,12 @@ footer h2 {
     flex-flow: row wrap;
     overflow-x: scroll;
     gap: 16px;
+}
+
+.content-detail-casts div:hover {
+    border: 1px solid white;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .content-detail-cast img {
@@ -402,6 +401,17 @@ footer h2 {
     padding: 0.5rem;
     margin: 1rem 1.4rem;
     border-radius: 0.4rem;
+}
+
+.content-detail-list h1:hover {
+    transform: scale(1.08) !important;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.content-detail-poster img:hover {
+    transform: scale(1.08) !important;
+    cursor: pointer;
 }
 
 .content-detail-trailer div:hover {

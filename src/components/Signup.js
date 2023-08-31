@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import NetflixBg from '../images/netflixBg.png'
-import netflixLogo from '../images/netflixLogo.png'
+import AppLogo from '../images/AppLogo.png'
 import { useState } from 'react'
 import { useUserAuth } from "../context/UserAuthContext";
 
@@ -29,7 +29,7 @@ const Signup = () => {
         <div className="bg-signin">
             <img src={NetflixBg} alt={NetflixBg} width={'100%'} />
             <div className="logo-signin">
-                <Link to='/'><img src={netflixLogo} alt={netflixLogo} /></Link>
+                <Link to='/'><img src={AppLogo} alt={AppLogo} /></Link>
                 <form className="signin" onSubmit={submitHandler}>
                     <h1>Sign Up</h1>
                     {err ? <h2>{err}</h2> : null}

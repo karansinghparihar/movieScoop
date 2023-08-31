@@ -93,7 +93,7 @@ const ContentDetail = ({ id, api_key, contentType }) => {
                             }
 
                             <div className='content-detail-details'>
-                                <div className='content-detail-list'>
+                                <div onClick={() => window.open('http://google.com/search?q='+(contentType === 'tv' ? detail.cdshow.name : detail.cdshow.original_title))} className='content-detail-list'>
                                     <h1>{contentType === 'tv' ? detail.cdshow.name : detail.cdshow.original_title}</h1><br />
                                 </div>
 
@@ -112,7 +112,7 @@ const ContentDetail = ({ id, api_key, contentType }) => {
                                 <div className='content-detail-casts'>
                                     {
                                         detail.cdcasts.slice(0, 10).map((cdcast, index) => {
-                                            return <div key={index} className='content-detail-cast'>
+                                            return <div key={index} onClick={() => window.open('http://google.com/search?q='+cdcast?.name)} className='content-detail-cast'>
                                                 {cdcast.profile_path ? <img src={`https://image.tmdb.org/t/p/w500/${cdcast.profile_path}`} alt={cdcast.profile_path} /> : <img src={EmptyCastImage} alt={EmptyCastImage} />}
                                                 {cdcast.name ? <h2 style={{ textAlign: 'center' }}>{cdcast.name}</h2> : null}
                                             </div>

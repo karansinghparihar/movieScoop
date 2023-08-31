@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ContentList from "./ContentList";
 import NetflixBg from '../images/netflixBg.png'
-import netflixLogo from '../images/netflixLogo.png'
+import AppLogo from '../images/AppLogo.png'
 import { Link } from "react-router-dom";
 
 export const Search = () => {
@@ -30,7 +30,7 @@ export const Search = () => {
             <img className='bg-search-image' src={NetflixBg} alt={NetflixBg} />
 
             <div className="search">
-            <Link to='/'><img src={netflixLogo} alt={netflixLogo} /></Link>
+            <Link to='/'><img src={AppLogo} alt={AppLogo} /></Link>
                 <form>
                     <input placeholder="&#xf002;  Movies and Tv Shows..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
                 </form>

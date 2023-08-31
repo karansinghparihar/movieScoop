@@ -1,5 +1,5 @@
 import GuestLogin from "./GuestLogin";
-import netflixLogo from '../images/netflixLogo.png'
+import AppLogo from '../images/AppLogo.png'
 import { Link, useNavigate } from "react-router-dom";
 import { useUserAuth } from "../context/UserAuthContext";
 
@@ -25,7 +25,7 @@ const Header = () => {
     return (
         <header>
             <div className="nav-links">
-                <Link to='/'><img src={netflixLogo} alt={netflixLogo} /></Link>
+                <Link to='/'><img src={AppLogo} alt={AppLogo} /></Link>
                 <Link to='/movies'>Movies</Link>
                 <Link to='/tvshows'>TV Shows</Link>
                 <Link to='/mylist'>My List</Link>

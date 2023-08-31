@@ -46,7 +46,7 @@ export const Contents = ({ contents }) => {
             }
         }
         getContents()
-    }, [])
+    }, [contentsData])
 
     const fetchContents = async (url) => {
         if (url === trendUrl) {
@@ -90,7 +90,7 @@ export const Contents = ({ contents }) => {
         <div className="contents">
             {/* {contentsDataEmpty ? <h2>Loading...</h2> : <> */}
             <ContentList contentType={contents.contentType} contents={contentsData.trendContents} heading={`Trending ${contents.heading}`} />
-            <ContentList contentType={contents.contentType} contents={contentsData.popContents} heading='Popular on Netflix' />
+            <ContentList contentType={contents.contentType} contents={contentsData.popContents} heading='Popular Now' />
             <ContentList contentType={contents.contentType} contents={contentsData.upcomContents} heading={`Upcoming ${contents.heading}`} />
             <ContentList contentType={contents.contentType} contents={contentsData.topContents} heading='Top Rated' />
             <ContentList contentType={contents.contentType} contents={contentsData.nowContents} heading='Now Playing' />

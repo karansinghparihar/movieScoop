@@ -31,16 +31,16 @@ const Footer = () => {
     ]
     return (
         <footer>
-            <h2>Questions? Call 000-800-040-1843</h2>
+            <h2>Questions? Call 000-000-000-0000</h2>
             {
                 foLinks.map((foLink, index) => {
                     return <FooterLinks key={index} foLink={foLink} />
                 })
             }
-            <h3 className='footer-country'><i className='fa fa-globe'></i>&nbsp;Netflix India</h3>
+            <h3 className='footer-country'><i className='fa fa-globe'></i>&nbsp;MovieScoop India</h3>
             <div className='footer-copyright'>Copyright © 2021, Developed by Karan Singh Parihar
             <a href='https://www.linkedin.com/in/karan-singh-parihar-291813153/' target='_blank'><button>&#xf0e1;</button></a>
-            <a href='https://github.com/karansinghparihar/netflixclone' target='_blank'><button>&#xf09b;</button></a>
+            <a href='https://github.com/karansinghparihar/movieScoop' target='_blank'><button>&#xf09b;</button></a>
             <br />
             Powered by &nbsp;
             <a href='https://www.themoviedb.org/' rel="noreferrer" target='_blank'><img src={tmdbLogo} style={{ width: '4rem' }} alt='tmdb'/></a>

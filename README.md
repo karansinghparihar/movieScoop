@@ -1,7 +1,7 @@
 
-# Netflix Clone
+# moviescoop Clone
 
-- **Netflix Clone by {Karan Singh Parihar} made with React, Redux, Context API, Protected Routes and Firebase**
+- **movieScoop Clone by {Karan Singh Parihar} made with React, Redux, Context API, Protected Routes and Firebase**
 
 ---
 
@@ -27,7 +27,7 @@
 
 ### Live Site Demo
 
-Website: [Link](https://netflix-karan.netlify.app/)
+Website: [Link](https://movieScoop-karan.netlify.app/)
 
 ---
 
@@ -58,7 +58,7 @@ Website: [Link](https://netflix-karan.netlify.app/)
 
 ## Implementation Highlights
 
-Netflix clone made with advanced react, redux, context-api, protected routes & firebase which asynchronously fetch movie data of over 30 thousand movies from Tmdb api. Features include guest login, favourites list, multi-active searchbar, user signup and signin (with google signin service), play trailer, dynamically generated movie and tv show pages and an interactive UI replicated from the original netflix app.
+movieScoop clone made with advanced react, redux, context-api, protected routes & firebase which asynchronously fetch movie data of over 30 thousand movies from Tmdb api. Features include guest login, favourites list, multi-active searchbar, user signup and signin (with google signin service), play trailer, dynamically generated movie and tv show pages and an interactive UI replicated from the original movieScoop app.
 
 ### User Stories
 
@@ -70,7 +70,7 @@ Netflix clone made with advanced react, redux, context-api, protected routes & f
 - A searchbar to search through TMDB database of over 30000 movies
 - Movie and TV Pages dynamically generated for every single movie
 - Details include cast info, play trailer, description. 
-- Original netflix UI replicated with highly organized and advanced css styling.
+- Original movieScoop UI replicated with highly organized and advanced css styling.
 
 ### Current Plans for Expansion
 

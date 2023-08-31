@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import NetflixBg from '../images/netflixBg.png'
-import netflixLogo from '../images/netflixLogo.png'
+import AppLogo from '../images/AppLogo.png'
 import { useState } from 'react'
 import { useUserAuth } from "../context/UserAuthContext";
 
@@ -38,7 +38,7 @@ const SignIn = () => {
         <div className="bg-signin">
             <img src={NetflixBg} alt={NetflixBg} width={'100%'} />
             <div className="logo-signin">
-                <Link to='/'><img src={netflixLogo} alt={netflixLogo} /></Link>
+                <Link to='/'><img src={AppLogo} alt={AppLogo} /></Link>
                 <form className="signin" onSubmit={submitHandler}>
                     <h1>Sign In</h1>
                     {err ? <h2>{err}</h2> : null}
@@ -47,7 +47,7 @@ const SignIn = () => {
                     <button type='submit'>Sign In</button><hr />
                     <button onClick={googleSignInHandler} style={{ background: '#4884f4', borderColor: '#4884f4' }}><link rel="shortcut icon" href="https://www.google.com/favicon.ico" />&#xf1a0;&nbsp;&nbsp;Sign in with Google</button><hr />
                     <div className="signin-footer">
-                        New to Netflix?<Link to='/signup'>Sign up now.</Link>
+                        New to MovieScoop?<Link to='/signup'>Sign up now.</Link>
                     </div>
                 </form>
             </div>
