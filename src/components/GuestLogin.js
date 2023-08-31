@@ -16,7 +16,7 @@ const GuestLogin = ({ color }) => {
 
     return (
         <>
-            <div className="guest-user" style={{ color: color }}>
+            <div className="guest-user" style={{ color: color, border: '1px solid '+color }}>
                 <div className={`${guest ? 'guest-login-disabled' : 'guest-login'}`} onClick={guestLoginHandler}><h3>&nbsp;{guest ? 'Guest User' : 'Guest Login'}</h3></div>
             </div> 
         </>
