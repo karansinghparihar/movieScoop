@@ -1,7 +1,7 @@
 
-# moviescoop Clone
+# MovieScoop
 
-- **movieScoop Clone by {Karan Singh Parihar} made with React, Redux, Context API, Protected Routes and Firebase**
+- **MovieScoop by {Karan Singh Parihar} made with React, Redux, Context API, Protected Routes and Firebase**
 
 ---
 
@@ -58,7 +58,7 @@ Website: [Link](https://movieScoop-karan.netlify.app/)
 
 ## Implementation Highlights
 
-movieScoop clone made with advanced react, redux, context-api, protected routes & firebase which asynchronously fetch movie data of over 30 thousand movies from Tmdb api. Features include guest login, favourites list, multi-active searchbar, user signup and signin (with google signin service), play trailer, dynamically generated movie and tv show pages and an interactive UI replicated from the original movieScoop app.
+MovieScoop made with advanced react, redux, context-api, protected routes & firebase which asynchronously fetch movie data of over 30 thousand movies from Tmdb api. Features include guest login, favourites list, multi-active searchbar, user signup and signin (with google signin service), play trailer, dynamically generated movie and tv show pages and an interactive UI replicated from the original movieScoop app.
 
 ### User Stories
 
